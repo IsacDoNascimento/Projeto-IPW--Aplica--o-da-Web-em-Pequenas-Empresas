@@ -1,9 +1,10 @@
 /* Fonte Título*/
-.mea-culpa-regular {
-  font-family: "Mea Culpa", cursive;
+.molle-regular-italic {
+  font-family: "Molle", cursive;
   font-weight: 400;
-  font-style: normal;
+  font-style: italic;
 }
+
 
 
 /* Estilização baseada nas cores do wireframe */
@@ -11,16 +12,6 @@ body {
     transition: background-color 0.3s, color 0.3s; 
     margin: 0;
     padding: 0;
-}
-
-.listrado {
-  background-image: repeating-linear-gradient(
-    45deg,       /* Ângulo das listras: 0deg (vertical), 90deg (horizontal), 45deg (diagonal) */
-    #333 0px,    /* Cor 1: Início */
-    #333 10px,   /* Cor 1: Fim (define a espessura) */
-    #fff 10px,   /* Cor 2: Início (deve ser igual ao fim da Cor 1) */
-    #fff 20px    /* Cor 2: Fim (define o ciclo completo) */
-  );
 }   
 
 /* Cores Padrão (Light Mode) */
