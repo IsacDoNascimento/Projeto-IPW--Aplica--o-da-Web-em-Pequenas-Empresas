@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Layout - Bootstrap</title>
+    <!-- CSS do Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/Style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mea+Culpa&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- 1. CABEÇALHO (BANNER / LOGO / DARK MODE) -->
+    <header class="container-fluid bg-header-main py-4">
+        <div class="row align-items-center">
+            <div class="col-md-2 d-flex justify-content-center">
+                <img src="Imagens/Logo Panificadora Piauí.png" alt="" style="height: 10em; width: auto ;">
+            </div>
+            <div class="col-md-8 text-center text-white">
+                <h1 class="display-3 mb-0 mea-culpa-regular" style="  font-family: Mea Culpa, cursive;">PANIFICADORA PIAUÍ</h1>
+            </div>
+            <div class="col-md-2 text-center">
+                <button class="btn text-white text-uppercase" style="font-size: 0.9rem; line-height: 1.2;" onclick="toggleDarkMode()">
+                    Alterar Dark<br>Mode
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- 2. BARRA DE NAVEGAÇÃO SECUNDÁRIA PRETA -->
+    <nav class="container-fluid bg-nav-black py-3">
+        <div class="row align-items-center text-center">
+            <div class="col-md-2">
+                <a href="#" class="text-white text-decoration-none text-uppercase fs-5">Sobre Nós</a>
+            </div>
+            <div class="col-md-2">
+                <a href="#" class="text-white text-decoration-none text-uppercase fs-5">Endereço</a>
+            </div>
+            <div class="col-md-3">
+                <a href="#" class="text-white text-decoration-none text-uppercase fs-5">Formulário<br>Endereço</a>
+            </div>
+            <div class="col-md-5 px-5">
+                <!-- Barra cinza dentro da faixa preta -->
+                <div class="navbar-box text-uppercase w-100">Navbar</div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 3. CONTEÚDO PRINCIPAL (CARDS E VÍDEO) -->
+    <main class="container-fluid bg-content-gray py-5">
+        <div class="container">
+            <!-- Linha dos Cards -->
+            <div class="row">
+                <div class="col-md-3 col-sm-6">
+                    <div class="placeholder-box card-box">CARDS</div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="placeholder-box card-box">CARDS</div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="placeholder-box card-box">CARDS</div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="placeholder-box card-box">CARDS</div>
+                </div>
+            </div>
+            
+            <!-- Linha do Vídeo Institucional -->
+            <div class="row mt-4">
+                <div class="col-12 text-center text-dark">
+                    <h3 class="text-uppercase mb-0 fs-2" style="font-weight: 400;">Vídeo Institucional</h3>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- 4. RODAPÉ -->
+    <footer class="container-fluid bg-nav-black py-5">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h2 class="text-white mb-0 text-uppercase display-5">Footer e FAQ</h2>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script para funcionalidade do Dark Mode -->
+    <script>
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+        }
+    </script>
+    
+    <!-- JS do Bootstrap 5 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

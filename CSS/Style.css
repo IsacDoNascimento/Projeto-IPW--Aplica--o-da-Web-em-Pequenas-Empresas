@@ -1,0 +1,64 @@
+/* Fonte Título*/
+.mea-culpa-regular {
+  font-family: "Mea Culpa", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+/* Estilização baseada nas cores do wireframe */
+body { 
+    transition: background-color 0.3s, color 0.3s; 
+    margin: 0;
+    padding: 0;
+}
+
+.listrado {
+  background-image: repeating-linear-gradient(
+    45deg,       /* Ângulo das listras: 0deg (vertical), 90deg (horizontal), 45deg (diagonal) */
+    #333 0px,    /* Cor 1: Início */
+    #333 10px,   /* Cor 1: Fim (define a espessura) */
+    #fff 10px,   /* Cor 2: Início (deve ser igual ao fim da Cor 1) */
+    #fff 20px    /* Cor 2: Fim (define o ciclo completo) */
+  );
+}   
+
+/* Cores Padrão (Light Mode) */
+.bg-header-main { background-image: repeating-linear-gradient(
+    0deg,
+    #65a637 0px,    /* Cor 1: Início */
+    #65a637 20px,   /* Cor 1: Fim (define a espessura) */
+    #f2b705 20px,   /* Cor 2: Início (deve ser igual ao fim da Cor 1) */
+    #f2b705 40px    /* Cor 2: Fim (define o ciclo completo) */
+  );}
+.bg-nav-black { background-color: #000000; color: white; }
+.bg-content-gray { background-color: #a6a6a6; }
+
+/* Caixas de Placeholder (Logo, Cards, Navbar-box) */
+.placeholder-box { 
+    background-color: #c0c0c0; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    color: #333;
+    font-weight: 500;
+}
+.logo-box { width: 120px; height: 120px; font-size: 1.5rem; color: white;}
+.card-box { height: 200px; margin-bottom: 20px; font-size: 1.5rem;}
+.navbar-box { 
+    background-color: #8c8c8c; 
+    height: 40px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    font-size: 0.9rem; 
+    color: #333; 
+}
+
+/* Dark mode (Ativado via JavaScript) */
+body.dark-mode { background-color: #121212; color: #ffffff; }
+body.dark-mode .bg-header-main { background-color: #2b2b2b; }
+body.dark-mode .bg-content-gray { background-color: #3f3f3f; }
+body.dark-mode .placeholder-box { background-color: #555555; color: white; }
+body.dark-mode .navbar-box { background-color: #555555; color: white; }
+body.dark-mode h1, body.dark-mode h3 { color: white !important; }
