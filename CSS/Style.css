@@ -1,11 +1,26 @@
+:root {
+  /* Paleta de Cores Clara*/
+  --color-deep-blue: #0B128C;
+  --color-purple:    #494EA6;
+  --color-green:     #82d248;
+  --color-lime:      #d4db25;
+  --color-yellow:    #F2B705;
+
+  /* Paleta de Cores Escura*/
+  --color-deep-blue-dark: #090d62;
+  --color-purple-dark:    #3c4086;
+  --color-green-dark:     #467227;
+  --color-lime-dark:      #818513;
+  --color-yellow-dark:    #a88005;
+
+}
+
 /* Fonte Título*/
 .molle-regular-italic {
   font-family: "Molle", cursive;
   font-weight: 400;
   font-style: italic;
 }
-
-
 
 /* Estilização baseada nas cores do wireframe */
 body { 
@@ -17,12 +32,16 @@ body {
 /* Cores Padrão (Light Mode) */
 .bg-header-main { background-image: repeating-linear-gradient(
     0deg,
-    #65a637 0px,    /* Cor 1: Início */
-    #65a637 20px,   /* Cor 1: Fim (define a espessura) */
-    #f2b705 20px,   /* Cor 2: Início (deve ser igual ao fim da Cor 1) */
-    #f2b705 40px    /* Cor 2: Fim (define o ciclo completo) */
+    var(--color-green) 0px,    /* Cor 1: Início */
+    var(--color-green) 20px,   /* Cor 1: Fim (define a espessura) */
+    var(--color-lime) 20px,   /* Cor 2: Início (deve ser igual ao fim da Cor 1) */
+    var(--color-lime) 40px    /* Cor 2: Fim (define o ciclo completo) */
   );}
-.bg-nav-black { background-color: #000000; color: white; }
+.bg-nav {
+    background-color: var(--color-deep-blue);
+    color: white;
+}
+
 .bg-content-gray { background-color: #a6a6a6; }
 
 /* Caixas de Placeholder (Logo, Cards, Navbar-box) */
