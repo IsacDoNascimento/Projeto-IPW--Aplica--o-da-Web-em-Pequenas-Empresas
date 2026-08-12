@@ -1,7 +1,7 @@
 :root {
   /* Paleta de Cores Clara*/
   --color-deep-blue: #0B128C;
-  --color-purple:    #494EA6;
+  --color-purple:    #b5b6c7;
   --color-green:     #82d248;
   --color-lime:      #d4db25;
   --color-yellow:    #F2B705;
@@ -42,7 +42,7 @@ body {
     color: white;
 }
 
-.bg-content-gray { background-color: #a6a6a6; }
+.bg-content { background-color: var(--color-purple); }
 
 /* Caixas de Placeholder (Logo, Cards, Navbar-box) */
 .placeholder-box { 
