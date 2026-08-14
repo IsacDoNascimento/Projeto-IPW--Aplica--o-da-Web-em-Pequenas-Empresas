@@ -1,10 +1,16 @@
 :root {
   /* Paleta de Cores Clara*/
-  --color-deep-blue: #0B128C;
+  --color-deep-blue: #0c14b8;
+  --color-deep-blue-weak: #2e36cc;
+  --blue-weak-2: #4a5ada;
   --color-purple:    #b5b6c7;
   --color-green:     #82d248;
+  --color-green-weak:     #90e057;
+  --green-weak-2:     #b1fc8c;
   --color-lime:      #d4db25;
-  --color-yellow:    #F2B705;
+  --color-yellow:    #ffe816;
+  --color-yellow-weak:    #fced21;
+  --yellow-weak-2:    #faf05f;
 
   /* Paleta de Cores Escura*/
   --color-deep-blue-dark: #090d62;
@@ -20,6 +26,8 @@
   font-family: "Molle", cursive;
   font-weight: 400;
   font-style: italic;
+  font-size: 5.5rem; 
+  color:rgb(255, 255, 255);
 }
 
 /* Estilização baseada nas cores do wireframe */
@@ -30,19 +38,54 @@ body {
 }   
 
 /* Cores Padrão (Light Mode) */
-.bg-header-main { background-image: repeating-linear-gradient(
-    0deg,
-    var(--color-green) 0px,    /* Cor 1: Início */
-    var(--color-green) 20px,   /* Cor 1: Fim (define a espessura) */
-    var(--color-lime) 20px,   /* Cor 2: Início (deve ser igual ao fim da Cor 1) */
-    var(--color-lime) 40px    /* Cor 2: Fim (define o ciclo completo) */
-  );}
-.bg-nav {
-    background-color: var(--color-deep-blue);
-    color: white;
+.bg-header-main { 
+    background-image: repeating-linear-gradient(
+        0deg,
+        var(--color-green) 0px,
+        var(--color-green) 20px,
+        var(--color-lime) 20px,
+        var(--color-lime) 40px
+    );
+
+    transition: background-image 0.3s;
 }
 
-.bg-content { background-color: var(--color-purple); }
+.bg-nav {
+    background: linear-gradient(
+        to right,
+        var(--color-deep-blue),
+        var(--color-green),
+        var(--color-yellow)
+    );
+
+    color: white;
+
+    transition: background 0.3s;
+}
+
+.bg-nav2{
+    background: linear-gradient(
+        to right,
+        var(--color-deep-blue-weak),
+        var(--color-green-weak),
+        var(--color-yellow-weak)
+    );
+
+    color: white;
+
+    transition: background 0.3s;
+}
+
+.bg-content { 
+    background: linear-gradient(
+        to right,
+        var(--blue-weak-2),
+        var(--green-weak-2),
+        var(--yellow-weak-2)
+    );
+
+    transition: background 0.3s;
+}
 
 /* Caixas de Placeholder (Logo, Cards, Navbar-box) */
 .placeholder-box { 
@@ -52,9 +95,23 @@ body {
     justify-content: center; 
     color: #333;
     font-weight: 500;
+
+    transition: background-color 0.3s, color 0.3s;
 }
-.logo-box { width: 120px; height: 120px; font-size: 1.5rem; color: white;}
-.card-box { height: 200px; margin-bottom: 20px; font-size: 1.5rem;}
+
+.logo-box { 
+    width: 120px; 
+    height: 120px; 
+    font-size: 1.5rem; 
+    color: white;
+}
+
+.card-box { 
+    height: 200px; 
+    margin-bottom: 20px; 
+    font-size: 1.5rem;
+}
+
 .navbar-box { 
     background-color: #8c8c8c; 
     height: 40px; 
@@ -65,10 +122,94 @@ body {
     color: #333; 
 }
 
+
 /* Dark mode (Ativado via JavaScript) */
-body.dark-mode { background-color: #121212; color: #ffffff; }
-body.dark-mode .bg-header-main { background-color: #2b2b2b; }
-body.dark-mode .bg-content-gray { background-color: #3f3f3f; }
-body.dark-mode .placeholder-box { background-color: #555555; color: white; }
-body.dark-mode .navbar-box { background-color: #555555; color: white; }
-body.dark-mode h1, body.dark-mode h3 { color: white !important; }
+
+body.dark-mode { 
+    background-color: #121212; 
+    color: #ffffff; 
+}
+
+
+/* CABEÇALHO NO DARK MODE */
+
+body.dark-mode .bg-header-main { 
+    background-image: repeating-linear-gradient(
+        0deg,
+        var(--color-green-dark) 0px,
+        var(--color-green-dark) 20px,
+        var(--color-lime-dark) 20px,
+        var(--color-lime-dark) 40px
+    );
+}
+
+
+/* PRIMEIRA NAVBAR NO DARK MODE */
+
+body.dark-mode .bg-nav { 
+    background: linear-gradient(
+        to right,
+        var(--color-deep-blue-dark),
+        var(--color-green-dark),
+        var(--color-yellow-dark)
+    );
+}
+
+
+/* SEGUNDA NAVBAR NO DARK MODE */
+
+body.dark-mode .bg-nav2 { 
+    background: linear-gradient(
+        to right,
+        var(--color-purple-dark),
+        var(--color-green-dark),
+        var(--color-yellow-dark)
+    );
+}
+
+
+/* CONTEÚDO NO DARK MODE */
+
+body.dark-mode .bg-content { 
+    background: linear-gradient(
+        to right,
+        #202040,
+        #263d26,
+        #4a4310
+    );
+}
+
+/* TÍTULOS NO DARK MODE */
+
+body.dark-mode h1, 
+body.dark-mode h3 { 
+    color: white !important; 
+}
+
+
+/* CORREÇÃO DO text-dark DO BOOTSTRAP */
+
+body.dark-mode .text-dark {
+    color: white !important;
+}
+
+
+/* Configurações das letras */
+
+.text-decoration-none {
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.text-uppercase:hover {
+  border: 2px solid white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.text-footer{
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  font-size: 4rem;
+}
