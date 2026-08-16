@@ -51,12 +51,7 @@ body {
 }
 
 .bg-nav {
-    background: linear-gradient(
-        to right,
-        var(--color-deep-blue),
-        var(--color-green),
-        var(--color-yellow)
-    );
+    background-color: var(--blue-weak-2); 
 
     color: white;
 
@@ -64,12 +59,7 @@ body {
 }
 
 .bg-nav2{
-    background: linear-gradient(
-        to right,
-        var(--color-deep-blue-weak),
-        var(--color-green-weak),
-        var(--color-yellow-weak)
-    );
+    background-color: var(--color-deep-blue);
 
     color: white;
 
@@ -77,14 +67,7 @@ body {
 }
 
 .bg-content { 
-    background: linear-gradient(
-        to right,
-        var(--blue-weak-2),
-        var(--green-weak-2),
-        var(--yellow-weak-2)
-    );
-
-    transition: background 0.3s;
+    background-color: rgb(208, 208, 240);
 }
 
 /* Caixas de Placeholder (Logo, Cards, Navbar-box) */
@@ -126,7 +109,7 @@ body {
 /* Dark mode (Ativado via JavaScript) */
 
 body.dark-mode { 
-    background-color: #121212; 
+    background-color: #8d8d8d; 
     color: #ffffff; 
 }
 
@@ -147,36 +130,21 @@ body.dark-mode .bg-header-main {
 /* PRIMEIRA NAVBAR NO DARK MODE */
 
 body.dark-mode .bg-nav { 
-    background: linear-gradient(
-        to right,
-        var(--color-deep-blue-dark),
-        var(--color-green-dark),
-        var(--color-yellow-dark)
-    );
+    background-color: var(--color-purple-dark);
 }
 
 
 /* SEGUNDA NAVBAR NO DARK MODE */
 
 body.dark-mode .bg-nav2 { 
-    background: linear-gradient(
-        to right,
-        var(--color-purple-dark),
-        var(--color-green-dark),
-        var(--color-yellow-dark)
-    );
+    background-color: var(--color-deep-blue-dark);
 }
 
 
 /* CONTEÚDO NO DARK MODE */
 
 body.dark-mode .bg-content { 
-    background: linear-gradient(
-        to right,
-        #202040,
-        #263d26,
-        #4a4310
-    );
+    background-color: rgb(84, 84, 109); 
 }
 
 /* TÍTULOS NO DARK MODE */
@@ -190,7 +158,7 @@ body.dark-mode h3 {
 /* CORREÇÃO DO text-dark DO BOOTSTRAP */
 
 body.dark-mode .text-dark {
-    color: white !important;
+    color: white !important;    
 }
 
 
@@ -201,15 +169,65 @@ body.dark-mode .text-dark {
   font-size: 2rem;
 }
 
-.text-uppercase:hover {
-  border: 2px solid white;
-  padding: 5px 10px;
-  border-radius: 4px;
-  transition: all 0.3s ease;
+.container-fluid:hover{
+    padding: 0.25em;
 }
+
+.container-fluid{
+    transition: all 1s ease-in-out;
+}
+
+.text-uppercase{
+    transform: translateY(0);
+    transition: all 0.5s ease-in-out;
+}
+
+.text-uppercase:hover {
+  transform: translateY(-0.1em);
+}
+
 
 .text-footer{
   font-weight: bold;
   color: rgb(255, 255, 255);
   font-size: 4rem;
+}
+
+a:hover{
+    color: var(--color-green);
+}
+
+a{
+    transition: all 1s ease-in-out;
+    color: white;
+    text-decoration: none;
+}
+
+a:active{
+    color: var(--color-yellow);
+}
+
+.logo:hover{
+    transform: scale(1.1);
+}
+
+.logo{
+    transition: all 0.5s ease-in-out;
+}
+
+.btn-outline-light:hover{
+    background-color: var(--color-green);
+    border: var(--color-green-dark);
+}
+
+.btn-outline-light{
+    transition: all 0.5s ease-in-out;
+}
+
+.form-control:hover{
+    padding: 3%;
+}
+
+.form-control{
+    transition: all 0.5s ease-in-out;
 }
