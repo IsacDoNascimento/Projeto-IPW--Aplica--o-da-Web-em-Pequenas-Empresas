@@ -278,3 +278,12 @@ p{
         footer{
             transition: all 1s ease-in-out;
         }
+
+        .placeholder-box:hover{
+            transform: scale(1.25);
+            transform:translateY(-0.5em);
+        }
+
+        .placeholder-box{
+            transition: all 1s ease-in-out;
+        }
