@@ -311,3 +311,7 @@ p{
         body.dark-mode #carrosselProdutos a:hover{
             color: var(--color-green);
         }
+
+        .preço{
+            color: var(--color-green);
+        }

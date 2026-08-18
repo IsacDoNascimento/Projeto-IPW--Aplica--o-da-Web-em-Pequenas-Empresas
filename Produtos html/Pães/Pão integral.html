@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Projeto Layout - Bootstrap</title>  
+    <!-- CSS do Bootstrap 5 -->  
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">  
+    <link rel="stylesheet" href="../CSS/Style.css">  
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+</head>  
+<body class="d-flex flex-column min-vh-100">  
+<!-- 1. CABEÇALHO (BANNER / LOGO / DARK MODE) -->  
+<header class="container-fluid bg-header-main">  
+    <div class="row align-items-center">  
+        <div class="col-md-2 d-flex justify-content-center logo" >  
+            <img src="../Imagens/Logo Panificadora Piauí.png" id="logo" alt="" style="height: 10em; width: auto ;">  
+        </div>  
+        <div class="col-md-8 text-center">  
+            <h1 class="text-uppercase molle-regular-italic" style="font-family: cursive;">PANIFICADORA PIAUÍ</h1>  
+        </div>  
+        <div class="col-md-2 text-center">  
+            <button class="text-uppercase btn text-white" style="font-size: 1.2rem; line-height: 1.2; font-weight: bold;" onclick="toggleDarkMode()">  
+                Alterar Modo<br>Escuro  
+            </button>  
+        </div>  
+    </div>  
+</header>  
+
+<!-- 2. BARRA DE NAVEGAÇÃO SECUNDÁRIA PRETA -->  
+<nav class="container-fluid bg-nav py-3">  
+    <div class="row align-items-center text-center">  
+        <div class="col-md-2 logo">  
+            <img src="../Imagens/Logo  Panificadora Piauí Clara.png" id="logoNav" style="width: 10em; height: auto;">  
+        </div>  
+        <div class="col-md-2">  
+            <a href="../sobre nós.html" class="text-uppercase text-decoration-none">Sobre Nós</a>  
+        </div>  
+        <div class="col-md-2">  
+            <a href="../endereço.html" class="text-decoration-none text-uppercase">Endereço</a>  
+        </div>  
+        <div class="col-md-2">  
+            <a href="../formulário endereço.html" class="text-decoration-none text-uppercase">Formulário Endereço</a>  
+        </div>
+    </div>  
+</nav>  
+
+
+<main class="container-fluid bg-content py-5 col-xl-11 shadow flex-grow-1">  
+    <div class="container">  
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlenhZtOyEO4sMiRypmVPWQX-p_Dl1Tbxuz6U9Jh2-Wg&s=10" class="img-fluid mb-2" style="max-height: 180px;"> 
+    </div> 
+</main>  
+
+<!-- 4. RODAPÉ -->  
+<footer class="container-fluid bg-nav py-5 px-lg-5 mt-auto">  
+    <div class="row text-center text-white justify-content-center">  
+        <!-- Título -->
+      <div class="col-12 mb-2">  
+            <h5 class="text-uppercase fw-bold mb-0">Panificadora Piauí</h5>  
+        </div>  
+
+        <!-- Linha única com todas as informações -->
+        <div class="col-12">    
+            <p class="small mb-0 text-center" style="font-size: 1rem; color: #c1f0f7; font-weight: bold;">  
+                Tradição, afeto e pães quentinhos • Desde 1995 &nbsp;|&nbsp; 📍 Av. Santos Dumont, Floriano - PI &nbsp;|&nbsp; ⏰ Seg a Sáb: 06h às 20h • Dom: 06h às 12h &nbsp;|&nbsp; © 2026 Desenvolvido por <strong class="text-white">Diogo & Isac</strong> (IFPI)  
+            </p>  
+        </div>  
+    </div>  
+</footer>
+
+<!-- Script para funcionalidade do Dark Mode -->  
+<script>  
+    function toggleDarkMode() {  
+        const isDark = document.body.classList.toggle('dark-mode');  
+        const logo = document.getElementById('logo');  
+
+        if (isDark) {  
+            if (logo) logo.src = 'Imagens/Logo  Panificadora Piauí Clara.png';  
+        } else {  
+            if (logo) logo.src = 'Imagens/Logo Panificadora Piauí.png';  
+        }  
+    }  
+</script>  
+  
+<!-- JS do Bootstrap 5 -->  
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>  
+</html>
