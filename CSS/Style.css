@@ -282,8 +282,32 @@ p{
         .placeholder-box:hover{
             transform: scale(1.25);
             transform:translateY(-0.5em);
+            cursor: pointer;
         }
 
         .placeholder-box{
             transition: all 1s ease-in-out;
+        }
+
+        .img_a{
+            display: inline;
+        }
+
+        #carrosselProdutos a{
+            color: black;
+            transition: all 1s ease-in-out;
+        }
+
+
+        #carrosselProdutos a:hover{
+            color: var(--color-deep-blue);
+        }
+
+        body.dark-mode #carrosselProdutos a{
+            color: white;
+            transition: all 1s ease-in-out;
+        }
+
+        body.dark-mode #carrosselProdutos a:hover{
+            color: var(--color-green);
         }
