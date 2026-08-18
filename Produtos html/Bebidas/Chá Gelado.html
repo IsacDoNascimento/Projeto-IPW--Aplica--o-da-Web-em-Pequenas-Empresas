@@ -6,7 +6,7 @@
     <title>Projeto Layout - Bootstrap</title>  
     <!-- CSS do Bootstrap 5 -->  
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">  
-    <link rel="stylesheet" href="../CSS/Style.css">  
+    <link rel="stylesheet" href="../../CSS/Style.css">  
     <meta name="referrer" content="strict-origin-when-cross-origin">
 </head>  
 <body class="d-flex flex-column min-vh-100">  
@@ -14,7 +14,7 @@
 <header class="container-fluid bg-header-main">  
     <div class="row align-items-center">  
         <div class="col-md-2 d-flex justify-content-center logo" >  
-            <img src="../Imagens/Logo Panificadora Piauí.png" id="logo" alt="" style="height: 10em; width: auto ;">  
+            <img src="../../Imagens/Logo Panificadora Piauí.png" id="logo" alt="" style="height: 10em; width: auto ;">  
         </div>  
         <div class="col-md-8 text-center">  
             <h1 class="text-uppercase molle-regular-italic" style="font-family: cursive;">PANIFICADORA PIAUÍ</h1>  
@@ -31,33 +31,40 @@
 <nav class="container-fluid bg-nav py-3">  
     <div class="row align-items-center text-center">  
         <div class="col-md-2 logo">  
-            <img src="../Imagens/Logo  Panificadora Piauí Clara.png" id="logoNav" style="width: 10em; height: auto;">  
+            <img src="../../Imagens/Logo  Panificadora Piauí Clara.png" id="logoNav" style="width: 10em; height: auto;">  
         </div>  
         <div class="col-md-2">  
-            <a href="../sobre nós.html" class="text-uppercase text-decoration-none">Sobre Nós</a>  
+            <a href="../../index.html" class="text-uppercase text-decoration-none">Menu/Cardápio</a>  
+        </div>
+        <div class="col-md-2">  
+            <a href="../../sobre nós.html" class="text-uppercase text-decoration-none">Sobre Nós</a>  
         </div>  
         <div class="col-md-2">  
-            <a href="../endereço.html" class="text-decoration-none text-uppercase">Endereço</a>  
+            <a href="../../endereço.html" class="text-decoration-none text-uppercase">Endereço</a>  
         </div>  
-        <div class="col-md-2">  
-            <a href="../formulário endereço.html" class="text-decoration-none text-uppercase">Formulário Endereço</a>  
+        <div class="col-md-4">  
+            <a href="../../formulário endereço.html" class="text-decoration-none text-uppercase">Formulário Endereço</a>  
         </div>
     </div>  
 </nav>  
 
 
 <main class="container-fluid bg-content py-5 col-xl-11 shadow flex-grow-1">  
-    <div class="row">
-        <div class="col-md-6">
-            <img src="https://placehold.co/600x400/eeeeee/31343c?text=Cha+Gelado" class="img-fluid mb-2" style="max-height: 30em; border-radius: 8px;">
+    <div class="row align-items-center justify-content-center gx-6">
+        <!-- Lado esquerdo: Imagem centralizada -->
+        <div class="col-md-5 d-flex justify-content-center">
+            <img src="https://s2-casaejardim.glbimg.com/J9BPyPxIoXyfpR4eYSmL4uXzUBk=/0x0:1400x1000/888x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_a0b7e59562ef42049f4e191fe476fe7d/internal_photos/bs/2023/4/q/n24OfAQBeaDQXyaqBv9w/seis-receitas-de-cha-gelado-faceis-de-fazer-para-se-refrescar.png" class="img-fluid mb-2 rounded shadow-sm" style="max-height: 25em;" alt="Chá Gelado">
         </div>
-        <div class="col-md-6">
-            <h2 style="color: var(--color-green); text-align: right; margin-bottom: 1em;">5 R$/Copo</h2>
-            <h3 style="text-align: right;">Chá Gelado de Pêssego</h3>
-            <p>Uma bebida leve e muito refrescante! Preparado artesanalmente com chá preto de alta qualidade, servido bem gelado com generosas rodelas de limão e um leve sabor de pêssego. Ideal para matar a sede nos dias mais quentes do Piauí.</p>
+
+        <!-- Lado direito: Conteúdo centralizado -->
+        <div class="col-md-5 text-center">
+            <h1 style="color: var(--color-green-dark);" class="fw-bold mb-3">Unidade: R$8,00</h1>
+            <p class="mb-3">Preparado com folhas selecionadas e infusionado lentamente para preservar todo o frescor natural, nosso chá gelado traz notas cítricas e aromáticas com um toque refrescante de limão e hortelã.</p>
+            <p class="mb-0">Servido com muito gelo, é a opção leve e hidratante perfeita para aliviar o calor, acompanhar um lanche saudável ou renovar as energias a qualquer hora do dia.</p>
         </div>
     </div>
 </main>
+
 <!-- 4. RODAPÉ -->  
 <footer class="container-fluid bg-nav py-5 px-lg-5 mt-auto">  
     <div class="row text-center text-white justify-content-center">  

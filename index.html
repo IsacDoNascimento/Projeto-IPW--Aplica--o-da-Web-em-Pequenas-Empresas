@@ -20,7 +20,7 @@
         <div class="col-md-8 text-center">  
             <h1 class="text-uppercase molle-regular-italic" style="font-family: cursive;">PANIFICADORA PIAUÍ</h1>  
         </div>  
-        <div class="col-md-2 text-center">  
+        <div class="col-md-2 text-center" >  
             <button class="text-uppercase btn text-white" style="font-size: 1.2rem; line-height: 1.2; font-weight: bold;" onclick="toggleDarkMode()">  
                 Alterar Modo<br>Escuro  
             </button>  
@@ -44,8 +44,8 @@
             <a href="formulário endereço.html" class="text-decoration-none text-uppercase">Formulário Endereço</a>  
         </div>  
         <div class="col-md-4 px-5">  
-             <form class="d-flex" role="search">  
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>  
+             <form class="d-flex" role="search" onsubmit="redirecionar(event)">  
+                <input class="form-control me-2" type="search" id="redirecionamento" placeholder="Digite o seu desejo..." aria-label="Search"/>  
                 <button class="btn btn-outline-light" type="submit">Search</button>  
             </form>  
         </div>  
@@ -224,12 +224,15 @@
         </div>
           
         <!-- Linha do Vídeo Institucional -->  
-        <div class="row mt-4">  
-            <div class="col-12 text-center">  
-            <iframe width="1080" height="480" src="https://www.youtube.com/embed/QP_H8A06BGo?si=lLsQeoS4v5vpbUa1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <div class="row mt-4 justify-content-center">  
+            <div class="col-12 col-lg-10">  
+                <div class="ratio ratio-16x9 rounded shadow-sm overflow-hidden">
+                    <iframe src="https://www.youtube.com/embed/QP_H8A06BGo?si=lLsQeoS4v5vpbUa1" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>  
         </div>  
     </div>  
-</main>  
+</main>
 
 <!-- 4. RODAPÉ -->  
 <footer class="container-fluid bg-nav py-5 px-lg-5 mt-auto">  
@@ -247,6 +250,42 @@
         </div>  
     </div>  
 </footer>
+
+<script>  
+    function redirecionar(event) {  
+        event.preventDefault();
+        
+        const termo = document.getElementById('redirecionamento').value.toLowerCase().trim();
+    
+        if (termo === 'pão francês' || termo === 'pao frances' || termo === 'pão frances' || termo === 'pao francês') {  
+            window.location.href = 'Produtos html/Pães/Pão frances.html';  
+        } else if (termo === 'pão integral' || termo === 'pao integral' || termo === 'pão integrau' || termo === 'pao integrau') {  
+            window.location.href = 'Produtos html/Pães/Pão integral.html';  
+        } else if (termo === 'pão de queijo' || termo === 'pao de queijo' || termo === 'pão queijo' || termo === 'pao queijo') {  
+            window.location.href = 'Produtos html/Pães/Pão de Queijo.html';  
+        } else if (termo === 'baguete' || termo === 'bagete') {  
+            window.location.href = 'Produtos html/Pães/Baguete.html';  
+        } else if (termo === 'bolo de cenoura' || termo === 'bolo cenoura') {  
+            window.location.href = 'Produtos html/Bolos/Bolo de Cenoura.html';  
+        } else if (termo === 'bolo de chocolate' || termo === 'bolo chocolate') {  
+            window.location.href = 'Produtos html/Bolos/Bolo de Chocolate.html';  
+        } else if (termo === 'bolo de fubá' || termo === 'bolo fubá') {  
+            window.location.href = 'Produtos html/Bolos/Bolo de Fubá.html';  
+        } else if (termo === 'bolo Red Velvet' || termo === 'bolo red velvet' || termo === 'bolo vermei' || termo === 'bolo vermelho') {  
+            window.location.href = 'Produtos html/Bolos/Bolo Red Valvet.html';  
+        } else if (termo === 'café' || termo === 'cafe') {  
+            window.location.href = 'Produtos html/Bebidas/Café.html';  
+        } else if (termo === 'capuccino' || termo === 'capucino' || termo === 'cappuccino' || termo === 'cappucino' || termo === 'caputinho' || termo === 'caputino' || termo === 'capputinho' || termo === 'capputino') {  
+            window.location.href = 'Produtos html/Bebidas/Capuccino.html';  
+        } else if (termo === 'chá gelado' || termo === 'cha gelado' || termo === 'xa gelado' || termo === 'xá gelado' || termo === 'chá' || termo === 'cha' || termo === 'xa' || termo === 'xá' || termo === 'chá jelado' || termo === 'cha jelado' || termo === 'xa jelado' || termo === 'xá jelado') {  
+            window.location.href = 'Produtos html/Bebidas/Chá Gelado.html';  
+        } else if (termo === 'suco natural' || termo === 'suco naturau' || termo === 'suco') {  
+            window.location.href = 'Produtos html/Bebidas/Suco Natural.html';  
+        } else {  
+            alert('Produto não encontrado. Por favor, retorne ao menu e veja nossas opções.');  
+        }
+    }  
+</script>
 
 <!-- Script para funcionalidade do Dark Mode -->  
 <script>  
